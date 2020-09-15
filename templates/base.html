@@ -10,11 +10,11 @@
   </head>
   <body>
     <header>
-      <a href="{% url 'home' %}"><h1>HOME</h1></a>
-      <a href="{% url 'create' %}"><h1>CREATE</h1></a>
+      <a href="{% url 'home' %}"><img class="homeimg" src="{% static 'IMG_0290.png' %}"></a>
+      <a href="{% url 'create' %}"><h1>새글쓰기</h1></a>
       <img class="dslion" src="{% static 'likelionds.png' %}" alt="" />
     </header>
-    <section>{% block content %} {% endblock %}</section>
+    <section class="myfont">{% block content %} {% endblock %}</section>
     <footer>
       <p>Copyright ⓒ 2020 덕성여대 멋쟁이사자처럼 All rights reserved.</p>
     </footer>

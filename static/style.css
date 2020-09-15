@@ -7,10 +7,30 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'GyeonggiBatang';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cafe24Shiningstar';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Shiningstar.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+          
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 .notosanskr * {
   font-family: "Noto Sans KR", sans-serif;
+}
+
+.myfont {
+  font-family: 'Cafe24Shiningstar';
+  font-size: 1.5rem;
 }
 
 html,
@@ -23,7 +43,7 @@ body {
   align-items: center;
   flex-direction: column;
   font-family: "Noto Sans KR", sans-serif;
-  background-color: #ebf0f1;
+  background-color: #d6cfcb;
 }
 
 /* header */
@@ -33,7 +53,7 @@ header {
   flex-direction: row;
   width: 100%;
   height: 10%;
-  background-color: #092e20;
+  background-color: #a6808c;
   color: white;
 }
 
@@ -41,7 +61,7 @@ header h1 {
   display: inline-block;
   padding: 10px;
   margin: 10px;
-  font-family: "CookieRunOTF-Bold";
+  font-family: 'GyeonggiBatang';
 }
 header a {
   all: unset;
@@ -54,6 +74,12 @@ header .dslion {
   width: 50px;
   margin-right: 1em;
 }
+
+header .homeimg{
+  margin-left: auto;
+  width: 50px;
+  margin-left: 1em;
+}
 /* section*/
 section {
   width: 70%;
@@ -62,7 +88,7 @@ section {
 /* footer */
 
 footer {
-  background-color: #44b78b;
+  background-color: #ccb7ae;
   width: 100%;
   display: flex;
   align-items: center;
@@ -77,8 +103,9 @@ footer p {
 /* 공통 요소 */
 
 h3 {
-  color: #0c4b33;
+  color: #565264;
   font-size: 2rem;
+  font-family: 'Cafe24Shiningstar';
 }
 
 .date {
@@ -91,20 +118,22 @@ h3 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  border: 1px dashed #092e20;
+  border: 1px dashed #565264;
   margin: 1em 1em;
 }
 
 .home p {
   flex-basis: auto;
   word-break: break-all;
-  margin: 1em;
+  font-size: 1rem;
+  font-family: 'Cafe24Shiningstar';
 }
 .home a {
   all: unset;
-  color: #0c4b33;
+  color: #565264;
   font-size: 2rem;
   cursor: pointer;
+  font-family: 'Cafe24Shiningstar';
 }
 
 .preview {
@@ -162,6 +191,8 @@ h3 {
 .detail p {
   margin: 1em;
   word-break: break-all;
+  font-size: 1.5rem;
+  font-family: 'Cafe24Shiningstar';
 }
 
 /* create.html update.html */
@@ -172,15 +203,15 @@ form {
 }
 
 input {
-  background-color: white;
-  color: #44b78b;
-  border: 1px solid #44b78b;
+  background-color: #ccb7ae;
+  color: white;
+  border: 1px solid white;
   border-radius: 5px;
   font-size: 12pt;
 }
 
 input:hover {
-  background-color: #44b78b;
-  color: white;
-  border: 1px solid #44b78b;
+  background-color: #706677;
+  color: #white;
+  border: 1px solid #white;
 }
