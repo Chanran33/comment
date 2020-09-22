@@ -63,14 +63,21 @@ header h1 {
   margin: 10px;
   font-family: 'GyeonggiBatang';
 }
+
+.goLogin {
+  margin-left : auto;
+  margin-right : 1em;
+}
+
 header a {
   all: unset;
   color: white;
   cursor: pointer;
+  font-family: 'GyeonggiBatang';
 }
 
 header .dslion {
-  margin-left: auto;
+  /* margin-left: auto; */
   width: 50px;
   margin-right: 1em;
 }
@@ -202,7 +209,7 @@ form {
   flex-direction: column;
 }
 
-input {
+input[type="submit"] {
   background-color: #ccb7ae;
   color: white;
   border: 1px solid white;
@@ -210,8 +217,15 @@ input {
   font-size: 12pt;
 }
 
-input:hover {
+input[type="submit"]:hover {
   background-color: #706677;
-  color: #white;
-  border: 1px solid #white;
+  color: white;
+  border: 1px solid white;
+}
+
+input{
+  background-color:white;
+  border: 1.5px solid #ccb7ae;
+  border-radius: 5px;
+  font-size: 12pt;
 }

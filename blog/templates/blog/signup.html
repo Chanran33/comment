@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<center style="color:#565264;"><h1> 환영합니다! </h1></center>
+
+<form method="POST" action="{% url 'signup' %}">
+    {% csrf_token %}
+    <div style="color:#565264;"> 이름 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input name="username" type="text" value=""></div>
+    <br>
+    <div style="color:#565264;"> 비밀번호 &nbsp;&nbsp;<input name="password1" type="password" value=""></div>
+    <br>
+    <div style="color:#565264;"> 한번더 &nbsp;&nbsp;&nbsp;<input name="password2" type="password" value=""></div>
+    <br>
+    <br>
+    <input type="submit" value="가입하기">
+</form>
+{% endblock %}

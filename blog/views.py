@@ -1,12 +1,42 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.models import User
+from django.contrib import auth
 from .models import Blog, Comment
 from .forms import BlogForm, CommentForm
-
 
 def home(request):
     blogs = Blog.objects
     return render(request, 'blog/home.html', {'blogs': blogs})
 
+def login(request):
+    if request.method =='POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = auth.authenticate(request, username=username, password=password)
+        if user is not None:
+            auth.login(request, user)
+            return redirect('home')
+        else :
+            return render(request, 'blog/login.html')
+    else :
+        return render(request, 'blog/login.html')
+
+def singup(request):
+    if request.method == 'POST':
+        if request.POST['password1'] == request.POST['password2']:
+            user = User.objects.create_user(
+                request.POST['username'],
+                password=request.POST['password1']
+            )
+            auth.login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+            return redirect('home')
+    return render(request,'blog/signup.html')    
+
+def logout(request):
+    if request.method == 'POST':
+        auth.logout(request)
+        return redirect('home')
+    return render(request, 'blog/signup.html')
 
 def create(request):
     if request.method == 'POST':
@@ -70,3 +100,4 @@ def comment_delete(request, pk):
         return redirect('/blog/'+str(blog.id))
     else:
         return render(request,'blog/comment_delete.html',{'object': comment})
+
