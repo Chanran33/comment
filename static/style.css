@@ -229,3 +229,7 @@ input{
   border-radius: 5px;
   font-size: 12pt;
 }
+
+.lo:hover{
+  color : #565264 
+}

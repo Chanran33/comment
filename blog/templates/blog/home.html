@@ -3,11 +3,6 @@
 {% if request.user.is_authenticated %}
 <center> <h2 style="color:#565264;"> {{ user.username }}님의 게시물입니다!</h2> <center>
 
-<a href="javascript:{document.getElementById('logout').submit()}">로그아웃하기</a>
-<form id="logout" method="POST" action="{% url 'logout' %}">
-  {% csrf_token %} <input type="hidden" />
-</form>
-
 {% for post in blogs.all %}
 <div class="home">
   <h3><a href="{% url 'detail' post.pk %}">{{post.title}}</a></h3>
