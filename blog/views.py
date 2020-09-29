@@ -8,6 +8,10 @@ def home(request):
     blogs = Blog.objects
     return render(request, 'blog/home.html', {'blogs': blogs})
 
+def map(request):
+    blogs = Blog.objects
+    return render(request, 'blog/map.html')
+
 def login(request):
     if request.method =='POST':
         username = request.POST['username']
